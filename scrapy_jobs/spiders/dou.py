@@ -52,11 +52,12 @@ class DouSpider(scrapy.Spider):
         ).lower()
 
         for technology in COMMON_TECHNOLOGIES:
-            tech_variants = [t.lower() for t in technology.split("/")]
+            tech_variants = [t.lower() for t in technology.split("|")]
+            tech_name = technology.split("|")[0]
             for tech in tech_variants:
                 if tech in description:
-                    if technology.split("|")[0] not in vacancy["technologies"]:
-                        vacancy["technologies"].append(technology.split("|")[0])
+                    if tech_name not in vacancy["technologies"]:
+                        vacancy["technologies"].append(tech_name)
                     break
 
         return vacancy
