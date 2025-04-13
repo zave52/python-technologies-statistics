@@ -18,11 +18,6 @@ class DouSpider(scrapy.Spider):
     allowed_domains = ["dou.ua"]
     start_urls = ["https://jobs.dou.ua/vacancies/?category=Python"]
 
-    custom_settings = {
-        'DOWNLOAD_DELAY': 1,
-        'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0',
-    }
-
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         options = Options()
