@@ -13,3 +13,18 @@ COMMON_TECHNOLOGIES = [
     "GraphQL", "RESTful APIs|REST", "Swagger", "OpenAPI",
     "Git", "AWS", "Azure", "GCP", "ML", "DL", "CV", "Odoo",
 ]
+
+UKRAINIAN_MONTHS = {
+    "січня": 1,
+    "лютого": 2,
+    "березня": 3,
+    "квітня": 4,
+    "травня": 5,
+    "червня": 6,
+    "липня": 7,
+    "серпня": 8,
+    "вересня": 9,
+    "жовтня": 10,
+    "листопада": 11,
+    "грудня": 12,
+}

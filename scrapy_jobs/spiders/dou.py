@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 
 from scrapy_jobs.items import PythonVacancy
-from config import COMMON_TECHNOLOGIES
+from config import COMMON_TECHNOLOGIES, UKRAINIAN_MONTHS
 
 
 class DouSpider(scrapy.Spider):
@@ -21,21 +21,6 @@ class DouSpider(scrapy.Spider):
     custom_settings = {
         'DOWNLOAD_DELAY': 1,
         'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0',
-    }
-
-    UKRAINIAN_MONTHS = {
-        "січня": 1,
-        "лютого": 2,
-        "березня": 3,
-        "квітня": 4,
-        "травня": 5,
-        "червня": 6,
-        "липня": 7,
-        "серпня": 8,
-        "вересня": 9,
-        "жовтня": 10,
-        "листопада": 11,
-        "грудня": 12,
     }
 
     def __init__(self, *args, **kwargs) -> None:
@@ -59,7 +44,7 @@ class DouSpider(scrapy.Spider):
         date_str = response.css(".date::text").get().strip()
         day, month, year = date_str.split()
         vacancy["posted_date"] = date(
-            int(year), self.UKRAINIAN_MONTHS[month], int(day)
+            int(year), UKRAINIAN_MONTHS[month], int(day)
         )
 
         description = ' '.join(
