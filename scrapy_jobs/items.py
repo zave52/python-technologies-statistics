@@ -10,6 +10,6 @@ class PythonVacancy(scrapy.Item):
     name = scrapy.Field()
     company = scrapy.Field()
     technologies = scrapy.Field()
-    posted_time = scrapy.Field()
+    posted_date = scrapy.Field()
     views = scrapy.Field()
     applications = scrapy.Field()
