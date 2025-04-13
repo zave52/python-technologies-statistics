@@ -1,0 +1,15 @@
+COMMON_TECHNOLOGIES = [
+    "Python", "Pyramid", "Bottle", "Sanic", "Falcon", "Starlette",
+    "Django", "Flask", "FastAPI", "Tornado",
+    "PostgreSQL", "MySQL", "MariaDB", "SQLite", "MongoDB", "ORM|ORMs",
+    "SQLAlchemy", "Alembic", "DynamoDB", "Cassandra", "Elasticsearch",
+    "Pandas", "NumPy", "SciPy", "Matplotlib", "Scikit-learn",
+    "TensorFlow", "PyTorch", "Keras", "PySpark", "Dask", "NLTK", "spaCy",
+    "pytest", "unitest", "Coverage", "Pytest-cov", "Mock", "Selenium", "Behave",
+    "Docker", "Kubernetes", "CI/CD", "Nginx", "Gunicorn", "uWSGI",
+    "Terraform", "Ansible", "Jenkins", "GitHub Actions", "asyncio", "Celery",
+    "RabbitMQ", "Redis", "Prometheus", "Grafana", "ELK Stack", "Sentry",
+    "JavaScript|JS", "TypeScript|TS", "React", "Vue.js", "Node.js",
+    "GraphQL", "RESTful APIs|REST", "Swagger", "OpenAPI",
+    "Git", "AWS", "Azure", "GCP", "ML", "DL", "CV", "Odoo",
+]
