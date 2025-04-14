@@ -33,8 +33,6 @@ class DouSpider(scrapy.Spider):
         vacancy["name"] = response.css("h1.g-h2::text").get()
         vacancy["company"] = response.css(".info .l-n a::text").get()
         vacancy["technologies"] = []
-        vacancy["views"] = None
-        vacancy["applications"] = None
 
         date_str = response.css(".date::text").get().strip()
         day, month, year = date_str.split()

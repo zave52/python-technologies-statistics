@@ -24,8 +24,6 @@ class WorkUaSpider(scrapy.Spider):
             response.css("time::attr(datetime)").get(),
             "%Y-%m-%d %H:%M:%S"
         ).date()
-        vacancy["views"] = None
-        vacancy["applications"] = None
 
         description = ' '.join(
             response.css("#job-description *::text").getall()
