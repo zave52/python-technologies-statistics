@@ -27,7 +27,7 @@ class DouSpider(scrapy.Spider):
     def closed(self, reason) -> None:
         self.driver.quit()
 
-    def _parse_single_vacancy(self, response: Response) -> PythonVacancy:
+    async def _parse_single_vacancy(self, response: Response) -> PythonVacancy:
         vacancy = PythonVacancy()
 
         vacancy["name"] = response.css("h1.g-h2::text").get()
@@ -55,7 +55,7 @@ class DouSpider(scrapy.Spider):
 
         return vacancy
 
-    def parse(
+    async def parse(
         self, response: Response, **kwargs
     ) -> Generator[scrapy.http.Request]:
         self.driver.get(response.url)

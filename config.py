@@ -1,6 +1,6 @@
 COMMON_TECHNOLOGIES = [
     "Python", "Pyramid", "Bottle", "Sanic", "Falcon", "Starlette",
-    "Django", "Flask", "FastAPI", "Tornado",
+    "Django", "Flask", "FastAPI", "Tornado", "Linux", "SQL",
     "PostgreSQL", "MySQL", "MariaDB", "SQLite", "MongoDB", "ORM|ORMs",
     "SQLAlchemy", "Alembic", "DynamoDB", "Cassandra", "Elasticsearch",
     "Pandas", "NumPy", "SciPy", "Matplotlib", "Scikit-learn",
@@ -11,7 +11,8 @@ COMMON_TECHNOLOGIES = [
     "RabbitMQ", "Redis", "Prometheus", "Grafana", "ELK Stack", "Sentry",
     "JavaScript|JS", "TypeScript|TS", "React", "Vue.js", "Node.js",
     "GraphQL", "RESTful APIs|REST", "Swagger", "OpenAPI",
-    "Git", "AWS", "Azure", "GCP", "ML", "DL", "CV", "Odoo",
+    "Git", "AWS", "Azure", "GCP", "Machine learning|ML", "Deep learning|DL",
+    "Artificial intelligence|AI", "CV", "Odoo", "Selenium", "GO",
 ]
 
 UKRAINIAN_MONTHS = {

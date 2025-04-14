@@ -12,7 +12,7 @@ class WorkUaSpider(scrapy.Spider):
     allowed_domains = ["www.work.ua"]
     start_urls = ["https://www.work.ua/jobs-it-industry-it-python/"]
 
-    def _parse_single_vacancy(self, response: Response) -> PythonVacancy:
+    async def _parse_single_vacancy(self, response: Response) -> PythonVacancy:
         vacancy = PythonVacancy()
 
         vacancy["name"] = "".join(response.css("h1 *::text").getall())
@@ -40,7 +40,7 @@ class WorkUaSpider(scrapy.Spider):
 
         return vacancy
 
-    def parse(self, response: Response, **kwargs):
+    async def parse(self, response: Response, **kwargs):
         for vacancy in response.css("div.card.card-hover"):
             vacancy_url = vacancy.css("h2 a::attr(href)").get()
             yield response.follow(
